@@ -1,4 +1,4 @@
-const RandomValue = Math.floor(Math.random()*20)
+const RandomValue = Math.floor(Math.random()*20+1)
 var guessCount = 0
 console.log(RandomValue)
 
@@ -28,7 +28,7 @@ function checknumber(){
             attempt.textContent = `${guessCount}: Attempt`
     
         }
-        
+
         else{
             console.log("too low")
             var low = document.getElementById('display')

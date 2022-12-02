@@ -29,7 +29,7 @@ function letty(){
     }
     console.log(j)
 }
-// letty()
+letty()
 
 let myAge = 22;
 let message = "hello everyone";
