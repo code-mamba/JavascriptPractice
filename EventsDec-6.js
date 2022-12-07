@@ -47,7 +47,7 @@ UserInput.addEventListener("blur",()=>{
 })
 
 
-// db click
+// dbl click
 const aside = document.querySelector("aside")
 
 
@@ -74,7 +74,7 @@ aside.addEventListener('dblclick',()=>{
    
 })
 
-// Mouse Event
+
 
 
 

@@ -7,7 +7,8 @@ Box.addEventListener('mouseenter',()=>{
     console.log(incoming)
     const incomingList = document.createElement("li")
     incomingList.textContent = `incoming ${incoming}`
-    document.querySelector('ul').appendChild(incomingList)
+    let unorderlist = document.querySelector("ul")
+    unorderlist.appendChild(incomingList)
 })
 Box.addEventListener('mouseleave',()=>{
     outgoing+=1
@@ -15,5 +16,6 @@ Box.addEventListener('mouseleave',()=>{
     console.log(outgoing)
     const outgoingList = document.createElement("li")
     outgoingList.textContent = `outgoing ${outgoing}`
-    document.querySelector("ul").appendChild(outgoingList)
+    let unorderlist = document.querySelector("ul")
+    unorderlist.appendChild(outgoingList)
 })
