@@ -1,19 +1,20 @@
-// alarmBtn = document.getElementById("alarm")
-// para = document.getElementById("first-P")
+alarmBtn = document.getElementById("alarm")
+para = document.getElementById("first-P")
 
-// function Alarm(){
-//     setTimeout(()=>{
-//         para.textContent = `Wake up`
-//     },3000)
-// }
+function Alarm(){
+    setTimeout(()=>{
+        para.textContent = `Wake up`
+    },3000)
+}
 
-// alarmBtn.addEventListener('click',Alarm)
+alarmBtn.addEventListener('click',Alarm)
 // -------------------------------------------------------------------------------------------
 
 const Name = document.getElementById("nameinp")
 const Timedelay = document.getElementById('delay')
 const setAlarm = document.getElementById("setalarm")
 const output = document.getElementById('showOut')
+const refresh = document.getElementById('refresh')
 
 
 console.log(delay)
@@ -44,3 +45,6 @@ setAlarm.addEventListener('click',()=>{
     })
 })
 
+refresh.addEventListener('click',()=>{
+    document.location.reload()
+})

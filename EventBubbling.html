@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Bubbling
+        </title>
+        <style>
+            .frame{
+                
+                display: table-cell;
+                border: 1px solid black;
+                padding: 50px;
+                text-align: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+    <div class="frame" id ="frame"onclick= frameTriggered()> 
+            <span class="frame" id="Span" onclick=spanTriggerd()> 
+                <button type="button" id ="btn "onclick=buttonTriggered()>click me</button>
+            </span>
+        </div>
+        <script>
+            function frameTriggered(){
+                divElement = document.getElementById("frame")
+                divElement.style.backgroundColor = "green"
+                
+            }
+            function spanTriggerd(){
+                spanElement = document.getElementById("Span")
+                spanElement.style.backgroundColor = 'red'
+                
+            }
+            function buttonTriggered(){
+             
+                alert("button triggered")
+            }
+        </script>
+    </body>
+</html>

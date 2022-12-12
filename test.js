@@ -3,14 +3,17 @@ const myCar = {
     model: 'Accord',
     year: 1998,
 }
-console.log(myCar)
+debugger
+console.log({...myCar})
 
 function myfunc(){
     myCar.make = "Maruti"
-    console.log(myCar)
+    debugger
+    console.log({...myCar})
     
 }
 
 
 myfunc()
-console.log(myCar)
+debugger
+console.log({...myCar})
