@@ -32,7 +32,7 @@ setAlarm.addEventListener('click',()=>{
         }
         else{
          
-            reject("set alarm should not be in negative")
+            reject("set alarm should not be less than 1000")
             
         }
     })

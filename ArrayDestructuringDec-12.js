@@ -25,3 +25,20 @@ function SumAndMultiply(a,b){
 let [sum, mult] = SumAndMultiply(1,2)
 console.log(sum)
 console.log(mult)
+
+
+const employee = {
+    empName: "Dhanush",
+    age: 22,
+    Department:"LAMP",
+    Address:{
+        City:"Chennai",
+        Country:"india"
+    }
+}
+
+const {empName:Name1,age:Age,Department:dept,Address:address} = employee
+console.log(Name1)
+console.log(Age)
+console.log(dept)
+console.log(address.City)
