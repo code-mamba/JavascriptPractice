@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event capturing</title>
+        <style>
+             div{
+                display: table-cell;
+                border: 1px solid black;
+                padding: 100px;
+                text-align: center;
+
+            }
+            .Box1{
+                background-color: Blue;
+            }
+            .Box2{
+                background-color: Yellow;
+            }
+            .Box3{
+                background-color:orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Box1">
+            <div class="Box2">
+                <div class="Box3">
+                    <p>Click me</p>
+                </div>
+         <script>
+                var grandParent = document.querySelector(".Box1")
+                var parent = document.querySelector('.Box2')
+                var grandchild = document.querySelector(".Box3")
+
+                grandParent.addEventListener('click',function(){
+                    var parent = document.querySelector('.Box2')
+                    parent.style.backgroundColor = 'red'
+                    console.log("grandparent")
+                  
+                    
+                    
+                },true)
+                parent.addEventListener('click',function(){
+                    var child = document.querySelector('.Box3')
+                    child.style.backgroundColor = "green"
+                    console.log("parent")
+                    
+                },true)
+                grandchild.addEventListener('click',function(){
+
+                    var child = document.querySelector(".Box3")
+                    child.style.backgroundColor = "yellow"
+                    console.log("child")
+                },true)
+         </script>   
+    </body>
+
+</html>

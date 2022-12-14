@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Bubbling</title>
+        <style>
+            div{
+                display: table-cell;
+                border: 1px solid black;
+                padding: 100px;
+                text-align: center;
+
+            }
+            .Box1{
+                background-color: Blue;
+            }
+            .Box2{
+                background-color: Yellow;
+            }
+            .Box3{
+                background-color:orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Box1" onclick="Box1Triggered()">
+            <div class="Box2" onclick="Box2Triggered()">
+                <div class="Box3" onclick= "Box3Triggered()">
+                    <p>Click me</p>
+                </div>
+            </div>
+        </div>
+        <script>
+           
+
+            function Box1Triggered(){
+        
+                Box1 = document.querySelector(".Box1")
+                Box1.style.backgroundColor = "orange"
+                console.log("Box1")
+               
+                
+                
+                
+            }
+            function Box2Triggered(){
+                Box2 = document.querySelector(".Box2")
+                Box2.style.backgroundColor = 'blue'
+                console.log("Box2")
+                
+            }
+            function Box3Triggered(){
+             
+                Box3 = document.querySelector('.Box3')
+                Box3.style.backgroundColor = 'yellow'
+                console.log("Box3")
+                
+            }
+
+          
+        </script>
+    </body>
+</html>
